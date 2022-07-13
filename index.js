@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+app.get('/test', (req, res) => {
+  res.send('today', today, 'yesterday', yesterday);
+});
+
 app.get('/hadith', (req, res) => {
   res.send(importData[hadithNumber]);
 });
