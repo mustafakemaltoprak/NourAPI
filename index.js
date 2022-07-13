@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const importData = require('./app.json');
 let port = process.env.PORT || 3005;
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World');
